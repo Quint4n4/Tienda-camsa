@@ -32,7 +32,7 @@ export const products = [
         name: "Nutricel Complejo Bioactivo",
         price: 1000,
         category: "Nutrición Celular",
-        image: "/imagenes/NUTRICEL.JPG",
+        image: "/imagenes/NUTRICEL.png",
         video: "https://videos.pexels.com/video-files/5927715/5927715-uhd_2560_1440_25fps.mp4",
         description: "Suplemento nutricional avanzado para optimizar la función celular y el metabolismo.",
         features: ["Absorción rápida", "Sin sabor", "Grado médico"]
@@ -72,7 +72,7 @@ export const products = [
         name: "Vaxmi Inmunomodulador",
         price: 500,
         category: "Inmunología",
-        image: "/imagenes/VAXMI.jpg",
+        image: "/imagenes/VAXMI.png",
         video: "https://www.youtube.com/watch?v=ri1LLpIU7as&list=PLxQdvKQUMT4TgmPXMmyq3HaOcAVv0JNam&index=2",
         description: "Fórmula avanzada para el fortalecimiento del sistema inmunológico.",
         features: ["Respuesta rápida", "Seguro", "Efecto prolongado"]
