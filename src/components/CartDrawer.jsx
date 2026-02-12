@@ -1,5 +1,6 @@
-import { X, Trash2, ArrowRight, CheckCircle } from 'lucide-react';
+import { X, Trash2, ArrowRight, CheckCircle, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
+import { useWhatsApp } from '../hooks/useWhatsApp';
 import './CartDrawer.css';
 
 export default function CartDrawer({ isOpen, onClose, cartItems, onRemoveItem, onUpdateQty, onClearCart }) {
@@ -7,32 +8,23 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onRemoveItem, o
     const [formData, setFormData] = useState({ name: '', phone: '', address: '' });
     const [isSuccess, setIsSuccess] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const { sendOrder } = useWhatsApp();
 
     const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     const handleCheckout = async (e) => {
         e.preventDefault();
+        if (!cartItems.length) return;
+
         setIsSubmitting(true);
 
-        // Simulate API call to n8n
-        const orderData = {
-            customer: formData,
-            order: cartItems.map(item => ({
-                product: item.name,
-                qty: item.quantity,
-                price: item.price
-            })),
-            total: total
-        };
-
-        console.log("Sending to n8n:", orderData);
-
-        // Mock delay
-        await new Promise(resolve => setTimeout(resolve, 1500));
-
-        setIsSubmitting(false);
-        setIsSuccess(true);
-        onClearCart();
+        try {
+            sendOrder(cartItems, formData);
+            setIsSuccess(true);
+            onClearCart();
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     if (!isOpen) return null;
@@ -53,7 +45,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onRemoveItem, o
                             <CheckCircle size={64} color="var(--accent-secondary)" />
                         </div>
                         <h3>¡Gracias por tu compra, {formData.name}!</h3>
-                        <p>Hemos recibido tu pedido correctamente. Un especialista te contactará por Telegram en breve para coordinar el pago y envío.</p>
+                        <p>Hemos recibido tu pedido correctamente. Te contactaremos por WhatsApp en breve para coordinar el pago y envío.</p>
                         <button className="btn btn-primary full-width" onClick={onClose}>
                             Seguir Explorando
                         </button>
@@ -142,8 +134,18 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onRemoveItem, o
                                     <span>Total</span>
                                     <span>${total.toLocaleString()}</span>
                                 </div>
-                                <button className="btn btn-primary full-width" onClick={() => setIsCheckingOut(true)}>
+                                <button
+                                    className="btn btn-primary full-width"
+                                    onClick={() => setIsCheckingOut(true)}
+                                >
                                     Finalizar Compra <ArrowRight size={18} />
+                                </button>
+                                <button
+                                    className="btn btn-whatsapp full-width"
+                                    onClick={() => sendOrder(cartItems)}
+                                >
+                                    <MessageCircle size={18} />
+                                    Pedir por WhatsApp
                                 </button>
                             </div>
                         )}

@@ -143,6 +143,25 @@
     background: var(--bg-secondary);
 }
 
+.btn-whatsapp {
+    background-color: #25d366;
+    border-color: #25d366;
+    color: #ffffff;
+    margin-top: 0.75rem;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe57;
+    border-color: #1ebe57;
+    color: #ffffff;
+}
+
+.btn-whatsapp:disabled {
+    background-color: #cccccc;
+    border-color: #cccccc;
+    cursor: not-allowed;
+}
+
 .summary-row {
     display: flex;
     justify-content: space-between;
