@@ -1,0 +1,143 @@
+:root {
+  /* Colors - Golden Luxury Palette (Clinica Camsa) */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F6F6F6;
+  /* Light gray from reference */
+  --text-primary: #000000;
+  --text-secondary: #4B5563;
+
+  /* Brand Colors */
+  --accent-primary: #B8860B;
+  /* Golden Brown */
+  --accent-secondary: #D4AF37;
+  /* Golden Light */
+  --accent-dark: #8B6914;
+  /* Golden Dark */
+
+  --border-light: #E5E7EB;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing & Layout */
+  --container-width: 1280px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Effects */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --glass: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(184, 134, 11, 0.2);
+  /* Golden tint border */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  /* Brand style: rounded buttons */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(80deg,
+      var(--accent-primary) 10%,
+      var(--accent-secondary) 38%,
+      var(--accent-dark) 62%,
+      var(--accent-primary) 88%,
+      var(--accent-dark) 100%);
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+}
+
+.btn-primary:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.4);
+}
+
+.btn-outline {
+  border: 2px solid var(--accent-primary);
+  background: white;
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  background: var(--bg-secondary);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.glass-panel {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+}
+
+/* Text Gradient for headings */
+.text-gradient {
+  background: linear-gradient(90deg,
+      var(--accent-primary) 0%,
+      var(--accent-secondary) 25%,
+      var(--accent-dark) 50%,
+      var(--accent-primary) 75%);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
