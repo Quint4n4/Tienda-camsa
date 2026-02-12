@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "5217443205681"; // Reemplaza con tu número real (código de país + número, sin + ni espacios)
+const WHATSAPP_NUMBER = "5217445514025"; // Reemplaza con tu número real (código de país + número, sin + ni espacios)
 
 export function useWhatsApp() {
   const sendOrder = (cartItems, customer) => {
