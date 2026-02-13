@@ -61,14 +61,16 @@
   color: var(--text-secondary);
 }
 
-/* Solo los cuadritos de categoría, sin rectángulo de fondo */
+/* Barra de categorías: fondo sólido y espacio para no sobreponer a las cards */
 .menu-page-nav {
   position: sticky;
   top: 70px;
   z-index: 30;
-  background: transparent;
-  padding: 0.75rem 0 1.25rem;
-  margin-bottom: 1rem;
+  background: var(--bg-primary, #fff);
+  padding: 0.75rem 0 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .menu-page-nav-inner {
@@ -108,13 +110,14 @@
 }
 
 .menu-page-content {
+  padding-top: 0.25rem;
   padding-bottom: 1rem;
 }
 
 /* Category section: accordion header + grid */
 .menu-category {
   margin-bottom: 1.25rem;
-  scroll-margin-top: 140px;
+  scroll-margin-top: 160px;
 }
 
 .menu-category-header {
