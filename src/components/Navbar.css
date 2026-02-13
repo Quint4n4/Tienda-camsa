@@ -30,6 +30,25 @@
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-link {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--accent-primary);
 }
 
 /* Logo Icon removed in favor of image */

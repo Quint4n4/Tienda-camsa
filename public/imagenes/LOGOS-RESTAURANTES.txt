@@ -1,0 +1,7 @@
+# Logos de restaurantes
+# Coloca aquí cada imagen con el nombre indicado para que se muestre en la app.
+
+bfresh.png          → bfresh & Healthy
+100-natural.png     → 100% Natural
+deliichi.png        → deliichi RESTAURANT
+camaron-jackie.png  → El Camarón Jackie

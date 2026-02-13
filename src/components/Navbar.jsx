@@ -1,5 +1,6 @@
 import { ShoppingCart } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 export default function Navbar({ cartCount, onOpenCart }) {
@@ -16,11 +17,12 @@ export default function Navbar({ cartCount, onOpenCart }) {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-content">
-        <div className="logo">
+        <Link to="/" className="logo">
           <img src="/imagenes/logo.png" alt="Clinica Camsa" style={{ height: '50px', width: 'auto', display: 'block' }} />
-        </div>
+        </Link>
 
         <div className="nav-actions">
+          <Link to="/restaurantes" className="nav-link">Restaurantes</Link>
           <button className="cart-btn" onClick={onOpenCart}>
             <ShoppingCart size={24} strokeWidth={1.5} />
             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}

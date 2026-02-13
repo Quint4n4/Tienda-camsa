@@ -5,7 +5,6 @@
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    /* backdrop-filter: blur(2px); Removing heavy blur for performance during animation */
     z-index: 200;
     display: flex;
     justify-content: flex-end;
@@ -21,7 +20,7 @@
     display: flex;
     flex-direction: column;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    animation: slideLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slideFromRight 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-left: 1px solid var(--border-light);
     will-change: transform;
     transform: translateZ(0);
@@ -246,7 +245,7 @@
     line-height: 1.6;
 }
 
-@keyframes slideLeft {
+@keyframes slideFromRight {
     from {
         transform: translateX(100%);
     }
@@ -254,6 +253,59 @@
     to {
         transform: translateX(0);
     }
+}
+
+.cart-section {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.cart-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.cart-section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
+}
+
+.cart-item-no-img .cart-item-details {
+    flex: 1;
+}
+
+.drawer-footer-inline {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.drawer-footer-inline .menu-page-name-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.drawer-footer-inline .menu-page-name-input {
+    width: 100%;
+    min-width: 0;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    font-size: 0.9375rem;
+    font-family: inherit;
+}
+
+.drawer-footer-inline .menu-page-name-input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
 }
 
 @keyframes scaleIn {

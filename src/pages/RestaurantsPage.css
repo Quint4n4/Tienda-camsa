@@ -1,0 +1,66 @@
+.restaurants-page {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.restaurants-hero {
+  background: linear-gradient(90deg, var(--accent-dark) 0%, var(--accent-primary) 50%, var(--accent-dark) 100%);
+  color: white;
+  padding: 1.5rem 0;
+}
+
+.restaurants-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.restaurants-hero-logo {
+  height: 48px;
+  width: auto;
+}
+
+.restaurants-hero-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.restaurants-hero-tagline {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  opacity: 0.95;
+}
+
+.restaurants-section {
+  padding: 3rem 0 4rem;
+}
+
+.restaurants-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.02em;
+}
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .restaurants-hero-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .restaurants-title {
+    font-size: 1.75rem;
+  }
+}
