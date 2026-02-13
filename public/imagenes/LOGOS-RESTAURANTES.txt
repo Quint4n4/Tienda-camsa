@@ -1,7 +1,11 @@
-# Logos de restaurantes
-# Coloca aquí cada imagen con el nombre indicado para que se muestre en la app.
+# Logos de restaurantes (y productos)
+# Al hacer "npm run build", se copian automáticamente desde la carpeta imagenes/ (raíz del proyecto) a public/imagenes/.
+# Asegúrate de que los archivos estén en imagenes/ y que los nombres coincidan exactamente (en producción importan mayúsculas/minúsculas).
 
-bfresh.png          → bfresh & Healthy
-100-natural.png     → 100% Natural
-deliichi.png        → deliichi RESTAURANT
-camaron-jackie.png  → El Camarón Jackie
+# Restaurantes:
+# BFRESH.PNG       → bfresh & Healthy
+# NATURAL.PNG      → 100% Natural
+# DELICHI1.PNG     → deliichi RESTAURANT
+# CAMARON.PNG      → El Camarón Jackie
+
+# También: logo.png (Clinica Camsa), y las imágenes de productos (NUTRICEL.png, VAXMI.png, Nano-exom.png, etc.)

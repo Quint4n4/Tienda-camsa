@@ -4,7 +4,7 @@ export const restaurants = [
     slug: "bfresh",
     name: "bfresh & Healthy",
     shortDescription: "Ensaladas. Múltiples opciones ricas y saludables.",
-    logo: "/imagenes/bfresh.png",
+    logo: "/imagenes/BFRESH.PNG",
     schedule: "Lun-Sáb 7:00am - 8:00pm",
     deliveryCost: "$40 MX / $2.14 USD aprox.",
     waitTime: "15-20 minutos",
