@@ -5,6 +5,11 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }) {
     return (
         <div className="product-card">
             <div className="product-image-container" onClick={() => onViewDetails(product)}>
+                {product.video && (
+                    <div className="product-video-badge" aria-hidden="true">
+                        <Play size={12} fill="currentColor" />
+                    </div>
+                )}
                 <img src={product.image} alt={product.name} className="product-image" loading="lazy" />
                 <div className="product-overlay">
                     <button className="view-details-btn">

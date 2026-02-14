@@ -1,10 +1,13 @@
 export const products = [
     {
         id: 1,
+        slug: "nano-exom",
         name: "Nano-Exom (Exosomas)",
         price: 1000,
         category: "Regeneración Avanzada",
         image: "/imagenes/Nano-exom.png",
+        flyer: "/imagenes/Nano-exom-flayer.jpg",
+        post: "/imagenes/Nano-exom-post.jpg",
         video: "https://www.youtube.com/watch?v=-CT8xRcYAlE&list=PLxQdvKQUMT4TgmPXMmyq3HaOcAVv0JNam&index=6",
         description: "Crema con exosomas. Regenerador tópico de tejidos, con efecto analgésico y antiinflamatorio local.",
         features: ["Alta pureza", "Fácil reconstitución", "Potenciador celular"],
@@ -29,6 +32,7 @@ export const products = [
     },
     {
         id: 2,
+        slug: "nutricel",
         name: "Nutricel Complejo Bioactivo",
         price: 1000,
         category: "Nutrición Celular",
@@ -39,36 +43,85 @@ export const products = [
     },
     {
         id: 3,
-        name: "Acuaminerales Plus",
+        slug: "acquaminerales",
+        name: "Acquaminerales Plus",
         price: 1500,
         category: "Suplementación",
         image: "/imagenes/ACUAMINERALES.png",
+        flyer: "/imagenes/acquaminerales-flayer.jpg",
+        post: "/imagenes/acquaminerales-post.jpg",
         video: "https://www.youtube.com/watch?v=FKRxvkO7BO4&list=PLxQdvKQUMT4TgmPXMmyq3HaOcAVv0JNam&index=7",
         description: "Solución rica en minerales esenciales para hidratación y balance electrolítico.",
-        features: ["Minerales traza", "Hidratación profunda", "Origen natural"]
+        tagline: "Minerales traza para hidratación profunda y equilibrio electrolítico.",
+        features: ["Minerales traza", "Hidratación profunda", "Origen natural"],
+        uses: [
+            "Deshidratación",
+            "Fatiga y bajo rendimiento",
+            "Desequilibrio electrolítico",
+            "Suplementación mineral"
+        ],
+        benefits: [
+            "Favorece la hidratación celular",
+            "Contribuye al balance electrolítico",
+            "Origen natural"
+        ],
+        modeOfUse: "Tomar según indicación médica. Consulta el flyer para más detalles."
     },
     {
         id: 4,
-        name: "Sales Minerales Schüssler",
-        price: 450,
+        slug: "sales",
+        name: "Sales Epson",
+        price: 500,
         category: "Homeopatía",
         image: "/imagenes/SALES.png",
+        flyer: "/imagenes/Sales-flayer.jpg",
+        post: "/imagenes/Sales-post.jpg",
         video: "https://www.youtube.com/watch?v=puNTSPXyrrQ",
-        description: "Sales bioquímicas para restablecer el equilibrio mineral celular.",
-        features: ["12 sales esenciales", "Fácil absorción", "Sin efectos secundarios"]
+        tagline: "Complemento natural para mejorar tu calidad de vida. Con cristales minerales naturales que se obtienen directamente por evaporación del agua del mar. A diferencia de las sales comunes, conservan sus minerales esenciales.",
+        uses: [
+            "Dolor e hinchazón",
+            "Preeclamsia y eclamsia",
+            "Problemas cardiovasculares",
+            "Estreñimiento",
+            "Migraña",
+            "Asma severa"
+        ],
+        benefits: [
+            "Purifican y desintoxican el cuerpo",
+            "Mejoran el descanso y reducen el estrés",
+            "Estimulan la circulación y alivian la fatiga muscular",
+            "Suavizan la piel y eliminan impurezas",
+            "Representan un momento de autocuidado físico y emocional"
+        ],
+        modeOfUse: "Contiene magnesio, potasio, calcio y zinc. Usar según indicación."
     },
     {
         id: 5,
+        slug: "zeolita",
         name: "Zeolita Activada",
         price: 600,
         category: "Detox",
         image: "/imagenes/ZEOLITA.png",
+        flyer: "/imagenes/Zeolita-flayer.jpg",
+        post: "/imagenes/Zeolita-post.jpg",
         video: "https://videos.pexels.com/video-files/6822830/6822830-hd_1920_1080_30fps.mp4",
-        description: "Mineral volcánico micronizado para desintoxicación profunda y eliminación de metales pesados.",
-        features: ["Micronizada", "Activada", "Grado farmacéutico"]
+        tagline: "Suplemento alimenticio enriquecido con calcio, regula el pH, elimina las toxinas y ayuda a fijar bioelementos que estimulan el metabolismo del organismo.",
+        uses: [
+            "Desintoxicación y eliminación de toxinas",
+            "Regulación del pH corporal",
+            "Apoyo al metabolismo",
+            "Equilibrio ácido-base"
+        ],
+        benefits: [
+            "Apoya la función del sistema inmunológico y promueve el equilibrio ácido-base en el cuerpo",
+            "Reconocida por su potencial para mejorar la absorción de nutrientes esenciales",
+            "Mineral volcánico micronizado para desintoxicación profunda"
+        ],
+        modeOfUse: "Contiene clinoptilolita, sodio, calcio, hierro, magnesio, entre otros. Usar según indicación."
     },
     {
         id: 6,
+        slug: "vaxmi",
         name: "Vaxmi Inmunomodulador",
         price: 500,
         category: "Inmunología",
@@ -79,10 +132,13 @@ export const products = [
     },
     {
         id: 7,
+        slug: "nasagest",
         name: "Nasagest Solución",
         price: 800,
         category: "Cuidado Respiratorio",
         image: "/imagenes/NASAGEST.png",
+        flyer: "/imagenes/nasagest-flayer.jpg",
+        post: "/imagenes/nasagest-post.jpg",
         video: "https://videos.pexels.com/video-files/6620586/6620586-uhd_2560_1440_25fps.mp4",
         description: "Esencia de eucalipto. Descongestionante, relajante y antiséptico. Uso tópico y ambiental.",
         features: ["Isotónica", "Sin conservantes", "Uso diario"],
@@ -120,10 +176,13 @@ export const products = [
     },
     {
         id: 8,
+        slug: "alivium",
         name: "Alivium Gel Regenerador",
         price: 750,
         category: "Cuidado Tópico",
         image: "/imagenes/ALIVIUM-IMG.JPG",
+        flyer: "/imagenes/Alivium-flayer.jpg",
+        post: "/imagenes/Alivium-post.jpg",
         video: "https://www.youtube.com/watch?v=0OyGRv_y0lA&list=PLxQdvKQUMT4TgmPXMmyq3HaOcAVv0JNam&index=8",
         description: "Desinflamatorio de amplio espectro, alivia el dolor crónico. Serum líquido, uso dérmico-tópico.",
         features: ["Absorción rápida", "Efecto frío/calor", "Ingredientes naturales"],
@@ -149,22 +208,52 @@ export const products = [
     },
     {
         id: 9,
+        slug: "nanoparticulas-cobre",
         name: "Nanopartículas de Cobre Iónico",
         price: 1500,
         category: "Nanotecnología",
         image: "/imagenes/MANOPARTICULASDECOBREIONICO.png",
+        flyer: "/imagenes/nanoparticulasdecobre-flayer.jpg",
+        post: "/imagenes/nanoparticulasedecobre-post.jpg",
         video: "https://videos.pexels.com/video-files/4225883/4225883-uhd_2560_1440_25fps.mp4",
         description: "Solución coloidal de cobre con alta capacidad antimicrobiana y regenerativa.",
-        features: ["Nanotecnología", "Alta estabilidad", "Uso versátil"]
+        tagline: "Nanotecnología con cobre iónico para uso antimicrobiano y regenerativo.",
+        features: ["Nanotecnología", "Alta estabilidad", "Uso versátil"],
+        uses: [
+            "Propiedades antimicrobianas",
+            "Regeneración celular",
+            "Aplicación tópica"
+        ],
+        benefits: [
+            "Alta capacidad antimicrobiana",
+            "Alta estabilidad coloidal",
+            "Uso versátil"
+        ],
+        modeOfUse: "Usar según indicación médica. Consulta el flyer para más detalles."
     },
     {
         id: 10,
+        slug: "shot5",
         name: "Shot 5 Revitalizante",
         price: 1500,
         category: "Suplementación",
         image: "/imagenes/Shot5-2.png",
+        flyer: "/imagenes/Shot5-flayer.jpg",
+        post: "/imagenes/Shot5-post.jpg",
         video: "https://videos.pexels.com/video-files/8317377/8317377-uhd_2560_1440_25fps.mp4",
-        description: "Shot concentrado de vitaminas y energía para el rendimiento diario.",
-        features: ["Energía inmediata", "Sabor agradable", "Práctico"]
+        tagline: "Shot concentrado de vitaminas y energía para el rendimiento diario. Fórmula práctica para momentos que demandan vitalidad y concentración.",
+        uses: [
+            "Baja energía y fatiga",
+            "Rendimiento físico y mental",
+            "Recuperación post-esfuerzo",
+            "Apoyo en actividad deportiva"
+        ],
+        benefits: [
+            "Energía inmediata",
+            "Sabor agradable y práctico de tomar",
+            "Concentrado de vitaminas esenciales",
+            "Favorece la vitalidad y concentración"
+        ],
+        modeOfUse: "Tomar un shot según necesidad. Ideal antes o durante la actividad. Consulta el flyer para más detalles."
     }
 ];
