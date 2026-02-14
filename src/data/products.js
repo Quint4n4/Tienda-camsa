@@ -32,106 +32,38 @@ export const products = [
     },
     {
         id: 2,
-        slug: "nutricel",
-        name: "Nutricel Complejo Bioactivo",
-        price: 1000,
-        category: "Nutrición Celular",
-        image: "/imagenes/NUTRICEL.png",
-        video: "https://videos.pexels.com/video-files/5927715/5927715-uhd_2560_1440_25fps.mp4",
-        description: "Suplemento nutricional avanzado para optimizar la función celular y el metabolismo.",
-        features: ["Absorción rápida", "Sin sabor", "Grado médico"]
+        slug: "alivium",
+        name: "Alivium Gel Regenerador",
+        price: 750,
+        category: "Cuidado Tópico",
+        image: "/imagenes/ALIVIUM-IMG.JPG",
+        flyer: "/imagenes/Alivium-flayer.jpg",
+        post: "/imagenes/Alivium-post.jpg",
+        video: "https://www.youtube.com/watch?v=0OyGRv_y0lA&list=PLxQdvKQUMT4TgmPXMmyq3HaOcAVv0JNam&index=8",
+        description: "Desinflamatorio de amplio espectro, alivia el dolor crónico. Serum líquido, uso dérmico-tópico.",
+        features: ["Absorción rápida", "Efecto frío/calor", "Ingredientes naturales"],
+        tagline: "Desinflamatorio de amplio espectro, alivia el dolor crónico.",
+        productType: "Serum líquido",
+        volume: "10ml",
+        uses: [
+            "Artritis reumatoide",
+            "Artrosis",
+            "Neuralgias y afecciones del nervio ciático",
+            "Tortícolis",
+            "Lumbalgia y dorsalgia",
+            "Lesiones deportivas",
+            "Contusiones",
+            "Dolor por mala postura",
+            "Síndrome de piernas cansadas"
+        ],
+        benefits: [
+            "Favorece la relajación muscular",
+            "Reduce la tensión y mejora la circulación",
+            "Gracias a su activo Factor Transdérmico penetra muy eficientemente en la zona de dolor o inflamación"
+        ]
     },
     {
         id: 3,
-        slug: "acquaminerales",
-        name: "Acquaminerales Plus",
-        price: 1500,
-        category: "Suplementación",
-        image: "/imagenes/ACUAMINERALES.png",
-        flyer: "/imagenes/acquaminerales-flayer.jpg",
-        post: "/imagenes/acquaminerales-post.jpg",
-        video: "https://www.youtube.com/watch?v=FKRxvkO7BO4&list=PLxQdvKQUMT4TgmPXMmyq3HaOcAVv0JNam&index=7",
-        description: "Solución rica en minerales esenciales para hidratación y balance electrolítico.",
-        tagline: "Minerales traza para hidratación profunda y equilibrio electrolítico.",
-        features: ["Minerales traza", "Hidratación profunda", "Origen natural"],
-        uses: [
-            "Deshidratación",
-            "Fatiga y bajo rendimiento",
-            "Desequilibrio electrolítico",
-            "Suplementación mineral"
-        ],
-        benefits: [
-            "Favorece la hidratación celular",
-            "Contribuye al balance electrolítico",
-            "Origen natural"
-        ],
-        modeOfUse: "Tomar según indicación médica. Consulta el flyer para más detalles."
-    },
-    {
-        id: 4,
-        slug: "sales",
-        name: "Sales Epson",
-        price: 500,
-        category: "Homeopatía",
-        image: "/imagenes/SALES.png",
-        flyer: "/imagenes/Sales-flayer.jpg",
-        post: "/imagenes/Sales-post.jpg",
-        video: "https://www.youtube.com/watch?v=puNTSPXyrrQ",
-        tagline: "Complemento natural para mejorar tu calidad de vida. Con cristales minerales naturales que se obtienen directamente por evaporación del agua del mar. A diferencia de las sales comunes, conservan sus minerales esenciales.",
-        uses: [
-            "Dolor e hinchazón",
-            "Preeclamsia y eclamsia",
-            "Problemas cardiovasculares",
-            "Estreñimiento",
-            "Migraña",
-            "Asma severa"
-        ],
-        benefits: [
-            "Purifican y desintoxican el cuerpo",
-            "Mejoran el descanso y reducen el estrés",
-            "Estimulan la circulación y alivian la fatiga muscular",
-            "Suavizan la piel y eliminan impurezas",
-            "Representan un momento de autocuidado físico y emocional"
-        ],
-        modeOfUse: "Contiene magnesio, potasio, calcio y zinc. Usar según indicación."
-    },
-    {
-        id: 5,
-        slug: "zeolita",
-        name: "Zeolita Activada",
-        price: 600,
-        category: "Detox",
-        image: "/imagenes/ZEOLITA.png",
-        flyer: "/imagenes/Zeolita-flayer.jpg",
-        post: "/imagenes/Zeolita-post.jpg",
-        video: "https://videos.pexels.com/video-files/6822830/6822830-hd_1920_1080_30fps.mp4",
-        tagline: "Suplemento alimenticio enriquecido con calcio, regula el pH, elimina las toxinas y ayuda a fijar bioelementos que estimulan el metabolismo del organismo.",
-        uses: [
-            "Desintoxicación y eliminación de toxinas",
-            "Regulación del pH corporal",
-            "Apoyo al metabolismo",
-            "Equilibrio ácido-base"
-        ],
-        benefits: [
-            "Apoya la función del sistema inmunológico y promueve el equilibrio ácido-base en el cuerpo",
-            "Reconocida por su potencial para mejorar la absorción de nutrientes esenciales",
-            "Mineral volcánico micronizado para desintoxicación profunda"
-        ],
-        modeOfUse: "Contiene clinoptilolita, sodio, calcio, hierro, magnesio, entre otros. Usar según indicación."
-    },
-    {
-        id: 6,
-        slug: "vaxmi",
-        name: "Vaxmi Inmunomodulador",
-        price: 500,
-        category: "Inmunología",
-        image: "/imagenes/VAXMI.png",
-        video: "https://www.youtube.com/watch?v=ri1LLpIU7as&list=PLxQdvKQUMT4TgmPXMmyq3HaOcAVv0JNam&index=2",
-        description: "Fórmula avanzada para el fortalecimiento del sistema inmunológico.",
-        features: ["Respuesta rápida", "Seguro", "Efecto prolongado"]
-    },
-    {
-        id: 7,
         slug: "nasagest",
         name: "Nasagest Solución",
         price: 800,
@@ -175,39 +107,33 @@ export const products = [
         modeOfUse: "Aplicar de 2 a 3 disparos sobre las palmas de las manos, frotar generando fricción e inhalar. Puedes repetirlo hasta 4 veces al día. Puede usarse como antiséptico de superficies, inhalado en vía aérea, repelente de mosquitos y aromaterapia."
     },
     {
-        id: 8,
-        slug: "alivium",
-        name: "Alivium Gel Regenerador",
-        price: 750,
-        category: "Cuidado Tópico",
-        image: "/imagenes/ALIVIUM-IMG.JPG",
-        flyer: "/imagenes/Alivium-flayer.jpg",
-        post: "/imagenes/Alivium-post.jpg",
-        video: "https://www.youtube.com/watch?v=0OyGRv_y0lA&list=PLxQdvKQUMT4TgmPXMmyq3HaOcAVv0JNam&index=8",
-        description: "Desinflamatorio de amplio espectro, alivia el dolor crónico. Serum líquido, uso dérmico-tópico.",
-        features: ["Absorción rápida", "Efecto frío/calor", "Ingredientes naturales"],
-        tagline: "Desinflamatorio de amplio espectro, alivia el dolor crónico.",
-        productType: "Serum líquido",
-        volume: "10ml",
+        id: 4,
+        slug: "acquaminerales",
+        name: "Acquaminerales Plus",
+        price: 1500,
+        category: "Suplementación",
+        image: "/imagenes/ACUAMINERALES.png",
+        flyer: "/imagenes/acquaminerales-flayer.jpg",
+        post: "/imagenes/acquaminerales-post.jpg",
+        video: "https://www.youtube.com/watch?v=FKRxvkO7BO4&list=PLxQdvKQUMT4TgmPXMmyq3HaOcAVv0JNam&index=7",
+        description: "Solución rica en minerales esenciales para hidratación y balance electrolítico.",
+        tagline: "Minerales traza para hidratación profunda y equilibrio electrolítico.",
+        features: ["Minerales traza", "Hidratación profunda", "Origen natural"],
         uses: [
-            "Artritis reumatoide",
-            "Artrosis",
-            "Neuralgias y afecciones del nervio ciático",
-            "Tortícolis",
-            "Lumbalgia y dorsalgia",
-            "Lesiones deportivas",
-            "Contusiones",
-            "Dolor por mala postura",
-            "Síndrome de piernas cansadas"
+            "Deshidratación",
+            "Fatiga y bajo rendimiento",
+            "Desequilibrio electrolítico",
+            "Suplementación mineral"
         ],
         benefits: [
-            "Favorece la relajación muscular",
-            "Reduce la tensión y mejora la circulación",
-            "Gracias a su activo Factor Transdérmico penetra muy eficientemente en la zona de dolor o inflamación"
-        ]
+            "Favorece la hidratación celular",
+            "Contribuye al balance electrolítico",
+            "Origen natural"
+        ],
+        modeOfUse: "Tomar según indicación médica. Consulta el flyer para más detalles."
     },
     {
-        id: 9,
+        id: 5,
         slug: "nanoparticulas-cobre",
         name: "Nanopartículas de Cobre Iónico",
         price: 1500,
@@ -232,7 +158,70 @@ export const products = [
         modeOfUse: "Usar según indicación médica. Consulta el flyer para más detalles."
     },
     {
-        id: 10,
+        id: 6,
+        slug: "vaxmi",
+        name: "Vaxmi Inmunomodulador",
+        price: 500,
+        category: "Inmunología",
+        image: "/imagenes/VAXMI.png",
+        video: "https://www.youtube.com/watch?v=ri1LLpIU7as&list=PLxQdvKQUMT4TgmPXMmyq3HaOcAVv0JNam&index=2",
+        description: "Fórmula avanzada para el fortalecimiento del sistema inmunológico.",
+        features: ["Respuesta rápida", "Seguro", "Efecto prolongado"]
+    },
+    {
+        id: 7,
+        slug: "sales",
+        name: "Sales Epson",
+        price: 500,
+        category: "Homeopatía",
+        image: "/imagenes/SALES.png",
+        flyer: "/imagenes/Sales-flayer.jpg",
+        post: "/imagenes/Sales-post.jpg",
+        video: "https://www.youtube.com/watch?v=puNTSPXyrrQ",
+        tagline: "Complemento natural para mejorar tu calidad de vida. Con cristales minerales naturales que se obtienen directamente por evaporación del agua del mar. A diferencia de las sales comunes, conservan sus minerales esenciales.",
+        uses: [
+            "Dolor e hinchazón",
+            "Preeclamsia y eclamsia",
+            "Problemas cardiovasculares",
+            "Estreñimiento",
+            "Migraña",
+            "Asma severa"
+        ],
+        benefits: [
+            "Purifican y desintoxican el cuerpo",
+            "Mejoran el descanso y reducen el estrés",
+            "Estimulan la circulación y alivian la fatiga muscular",
+            "Suavizan la piel y eliminan impurezas",
+            "Representan un momento de autocuidado físico y emocional"
+        ],
+        modeOfUse: "Contiene magnesio, potasio, calcio y zinc. Usar según indicación."
+    },
+    {
+        id: 8,
+        slug: "zeolita",
+        name: "Zeolita Activada",
+        price: 600,
+        category: "Detox",
+        image: "/imagenes/ZEOLITA.png",
+        flyer: "/imagenes/Zeolita-flayer.jpg",
+        post: "/imagenes/Zeolita-post.jpg",
+        video: "https://videos.pexels.com/video-files/6822830/6822830-hd_1920_1080_30fps.mp4",
+        tagline: "Suplemento alimenticio enriquecido con calcio, regula el pH, elimina las toxinas y ayuda a fijar bioelementos que estimulan el metabolismo del organismo.",
+        uses: [
+            "Desintoxicación y eliminación de toxinas",
+            "Regulación del pH corporal",
+            "Apoyo al metabolismo",
+            "Equilibrio ácido-base"
+        ],
+        benefits: [
+            "Apoya la función del sistema inmunológico y promueve el equilibrio ácido-base en el cuerpo",
+            "Reconocida por su potencial para mejorar la absorción de nutrientes esenciales",
+            "Mineral volcánico micronizado para desintoxicación profunda"
+        ],
+        modeOfUse: "Contiene clinoptilolita, sodio, calcio, hierro, magnesio, entre otros. Usar según indicación."
+    },
+    {
+        id: 9,
         slug: "shot5",
         name: "Shot 5 Revitalizante",
         price: 1500,
