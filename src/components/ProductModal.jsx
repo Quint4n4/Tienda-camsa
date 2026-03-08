@@ -11,6 +11,7 @@ export default function ProductModal({ product, isOpen, onClose, onAddToCart }) 
     const [flyerError, setFlyerError] = useState(false);
     const [postError, setPostError] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [imageLightboxOpen, setImageLightboxOpen] = useState(false);
 
     const hasFlyer = product?.flyer && !flyerError;
     const hasPost = product?.post && !postError;
@@ -45,6 +46,7 @@ export default function ProductModal({ product, isOpen, onClose, onAddToCart }) 
             setFlyerError(false);
             setPostError(false);
             if (slides.length > 0) setCurrentSlide(0);
+            setImageLightboxOpen(false);
         } else {
             document.body.style.overflow = 'unset';
             if (videoRef.current) videoRef.current.pause();
@@ -57,6 +59,10 @@ export default function ProductModal({ product, isOpen, onClose, onAddToCart }) 
     useEffect(() => {
         if (!isOpen) return;
         const handler = (e) => {
+            if (e.key === 'Escape') {
+                setImageLightboxOpen(false);
+                return;
+            }
             if (e.key === 'ArrowLeft') {
                 e.preventDefault();
                 setCurrentSlide((prev) => (prev <= 0 ? slides.length - 1 : prev - 1));
@@ -136,7 +142,12 @@ export default function ProductModal({ product, isOpen, onClose, onAddToCart }) 
         }
         if (s.type === 'image') {
             return (
-                <div className="modal-image-wrapper">
+                <button
+                    type="button"
+                    className="modal-image-wrapper modal-image-wrapper--clickable"
+                    onClick={() => setImageLightboxOpen(true)}
+                    aria-label="Ver imagen en grande"
+                >
                     <img
                         src={s.src}
                         alt={s.alt || 'Imagen del producto'}
@@ -146,7 +157,8 @@ export default function ProductModal({ product, isOpen, onClose, onAddToCart }) 
                             if (s.src === product.post) setPostError(true);
                         }}
                     />
-                </div>
+                    <span className="modal-image-zoom-hint">Ver en grande</span>
+                </button>
             );
         }
         return null;
@@ -159,9 +171,35 @@ export default function ProductModal({ product, isOpen, onClose, onAddToCart }) 
                     <X size={24} />
                 </button>
 
+                {imageLightboxOpen && slide?.type === 'image' && (
+                    <div
+                        className="image-lightbox-overlay"
+                        onClick={() => setImageLightboxOpen(false)}
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="Imagen ampliada"
+                    >
+                        <div className="image-lightbox-content" onClick={e => e.stopPropagation()}>
+                            <button
+                                type="button"
+                                className="image-lightbox-close"
+                                onClick={() => setImageLightboxOpen(false)}
+                                aria-label="Cerrar"
+                            >
+                                <X size={28} />
+                            </button>
+                            <img
+                                src={slide.src}
+                                alt={slide.alt || 'Imagen del producto en tamaño completo'}
+                                className="image-lightbox-img"
+                            />
+                        </div>
+                    </div>
+                )}
+
                 <div className="modal-grid">
                     <div className="modal-media">
-                        <div className="modal-main-media">
+                        <div className={`modal-main-media ${slide?.type === 'image' ? 'modal-main-media--image' : ''}`}>
                             {slide ? renderSlide(slide) : (
                                 <p className="modal-image-placeholder">Imagen no disponible</p>
                             )}

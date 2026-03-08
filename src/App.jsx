@@ -25,30 +25,6 @@ function App() {
     setIsCartOpen(true);
   };
 
-  const addRestaurantToCart = (item, restaurant) => {
-    const cartId = `restaurant-${restaurant.slug}-${item.id}`;
-    setCartItems(prev => {
-      const existing = prev.find(i => i.type === 'restaurant' && i.id === cartId);
-      if (existing) {
-        return prev.map(i =>
-          i.id === cartId ? { ...i, quantity: i.quantity + 1 } : i
-        );
-      }
-      return [...prev, {
-        type: 'restaurant',
-        id: cartId,
-        itemId: item.id,
-        name: item.name,
-        price: item.price ?? 0,
-        quantity: 1,
-        restaurantId: restaurant.slug,
-        restaurantName: restaurant.name,
-        contactPhone: restaurant.contactPhone,
-      }];
-    });
-    setIsCartOpen(true);
-  };
-
   const removeFromCart = (id) => {
     setCartItems(prev => prev.filter(item => item.id !== id));
   };
@@ -90,13 +66,7 @@ function App() {
           }
         />
         <Route path="/restaurantes" element={<RestaurantsPage />} />
-        <Route path="/restaurantes/:slug" element={
-          <RestaurantMenuPage
-            cartItems={cartItems}
-            onAddToCartRestaurant={addRestaurantToCart}
-            onOpenCart={() => setIsCartOpen(true)}
-          />
-        } />
+        <Route path="/restaurantes/:slug" element={<RestaurantMenuPage />} />
       </Routes>
 
       <CartDrawer

@@ -1,0 +1,108 @@
+.restaurant-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.25);
+}
+
+.restaurant-gallery-main {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-secondary);
+}
+
+.restaurant-gallery-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.restaurant-gallery-slide--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.restaurant-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.restaurant-gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 10;
+}
+
+.restaurant-gallery-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.restaurant-gallery-btn--prev {
+  left: 1rem;
+}
+
+.restaurant-gallery-btn--next {
+  right: 1rem;
+}
+
+.restaurant-gallery-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.restaurant-gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.restaurant-gallery-dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.restaurant-gallery-dot--active {
+  background: white;
+  transform: scale(1.2);
+}
+
+@media (min-width: 768px) {
+  .restaurant-gallery {
+    max-width: 1000px;
+  }
+
+  .restaurant-gallery-main {
+    aspect-ratio: 16 / 10;
+  }
+}
