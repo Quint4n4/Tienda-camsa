@@ -141,7 +141,7 @@ export const products = [
         image: "/imagenes/MANOPARTICULASDECOBREIONICO.png",
         flyer: "/imagenes/nanoparticulasdecobre-flayer.jpg",
         post: "/imagenes/nanoparticulasedecobre-post.jpg",
-        video: "https://videos.pexels.com/video-files/4225883/4225883-uhd_2560_1440_25fps.mp4",
+        video: "https://youtu.be/1kkfyvE5D98?si=IxBuy9pTDDvr5oZr",
         description: "Solución coloidal de cobre con alta capacidad antimicrobiana y regenerativa.",
         tagline: "Nanotecnología con cobre iónico para uso antimicrobiano y regenerativo.",
         features: ["Nanotecnología", "Alta estabilidad", "Uso versátil"],
@@ -205,7 +205,7 @@ export const products = [
         image: "/imagenes/ZEOLITA.png",
         flyer: "/imagenes/Zeolita-flayer.jpg",
         post: "/imagenes/Zeolita-post.jpg",
-        video: "https://videos.pexels.com/video-files/6822830/6822830-hd_1920_1080_30fps.mp4",
+        video: "https://youtu.be/9guxFzxFMRo?si=5mLXteQRBC6SD56P",
         tagline: "Suplemento alimenticio enriquecido con calcio, regula el pH, elimina las toxinas y ayuda a fijar bioelementos que estimulan el metabolismo del organismo.",
         uses: [
             "Desintoxicación y eliminación de toxinas",
